@@ -1,0 +1,56 @@
+@dkColor:#108ee9;
+@lgColor:rgb(219, 237, 250);
+
+.eoa-table {
+    width: 100%;
+
+    .calendar-head {
+        color: rgba(0,0,0,.55);
+    }
+
+
+    .calendar-cell {
+        padding: 4px;
+        border-radius: 2px;
+
+        .calendar-date {
+            display: block;
+            margin: 0 auto;
+            color: rgba(0,0,0,.65);
+            border-radius: 2px;
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+            border: 1px solid transparent;
+            padding: 0;
+            background: transparent;
+            text-align: center;
+            transition: background .3s ease;
+            cursor: pointer;
+        }
+        .calendar-date:hover {
+            background: @dkColor;
+            color: #fff;
+        }
+    }
+
+    .calendar-cell-othermonth {
+
+        >.calendar-date {
+            color: rgba(0, 0, 0, 0.25);
+        }
+
+        >.calendar-date:hover {
+            background: @lgColor;
+            color: rgba(0, 0, 0, 0.40);
+        }
+    }
+
+    .calendar-cell-today {
+        >.calendar-date {
+            border:1px solid @dkColor;
+            color: @dkColor;
+        }
+    }
+    
+}
