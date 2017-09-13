@@ -32,6 +32,7 @@ module.exports = {
         extensions: [".js", ".jsx", ".less", ".css"] // 后缀名自动补全
     },
     plugins: [
+        
         new webpack.HotModuleReplacementPlugin(),
 
         new HtmlWebapckPlugin({

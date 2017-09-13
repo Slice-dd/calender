@@ -37,7 +37,7 @@ export default class DatePickers extends React.Component {
     getCalendarDays({firstDayInMonth, daysInMonth, shouldNextMonthDays, daysInPrevMonth}) {
 
         const allDays = [], tdArray = [];
-        debugger
+        
         for(let i = firstDayInMonth ;  i-- ;) {
             allDays.push(daysInPrevMonth - i );
         }
@@ -69,12 +69,10 @@ export default class DatePickers extends React.Component {
                 break;
                 
             case index < firstDayInMonth :
-                // debugger
                 this.resolveDate(moment([year, month]).subtract(1, 'months'));
                 break;
 
             case index > ( firstDayInMonth + daysInMonth ) -1 :
-                // debugger
                 this.resolveDate(moment([year, month]).add(1, 'months'));
                 break;
         }

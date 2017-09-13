@@ -2,7 +2,7 @@
   "name": "calender",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --color --compress"
+    "start": "webpack-dev-server --progress --useLocalIp --color --compress --history-api-fallback"
   },
   "description": "react-calender",
   "main": "index.js",
